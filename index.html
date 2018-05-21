@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Learning Javascript</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+	
+	
+	
+	
+	 
+	
+	<!--<div class="answer">
+	test
+	</div>		
+	
+	
+	<a href ="#" class="clickHandler"><img src="blade.gif" alt=""></a>	-->
+	
+	<a href="#" class="rock">Rock<img src="rock.gif" alt="rock"></a>
+	<a href="#" class="paper">Paper<img src="paper2.gif" alt="paper"></a>
+	<a href="#" class="scissors">Scissors <img src="scissors3.gif" alt="Scissors"></a>
+	<script>
+	//Three choices: Rock Paper or Scissors
+	
+		//Each one of these choices has the ability to win, lose or draw when combined with another choice. 
+		
+		//rock beats scissors and loses to paper. 
+		//paper beats rock and loses to scissors. 
+		//Scissors beats paper and loses to rock.
+		//If both choices are the same then it is a draw.
+		
+		//When I click the Rock, paper or scissors gif the code should recognize my choice, trigger the computer to make a random choice and based on the two choices that were made print the results to the screen. 
+		 
+		
+		 
+		
+		//Establish players
+		
+		/*
+		
+		var clickLink = document.querySelector(".clickHandler");
+		var clickRock = document.querySelector(".rock");
+		var clickPaper = document.querySelector(".paper");
+		var clickScissors = document.querySelector(".scissors");
+		
+		clickLink.onclick = function(){
+			document.querySelector(".answer").innerHTML = ' <h2>YOU WIN!!!!</h2> ';
+			return false;
+			
+		}
+		 
+		clickRock.onclick = function(){
+			document.querySelector(".answer").innerHTML = '  <h2>Rock WIN!!!!</h2> ';
+			return false;
+			
+		}
+		 
+		clickPaper.onclick = function(){
+			document.querySelector(".answer").innerHTML = '  <h2>Paper WIN!!!!</h2> ';
+			return false;
+			
+		}
+		
+		clickScissors.onclick = function(){
+			document.querySelector(".answer").innerHTML = ' <h2>Scissors WIN!!!!</h2>';
+			return false;
+			
+		*/
+		
+		  
+		/*var player1Rock = document.querySelector(".rock"); 
+		var player1Paper = document.querySelector(".paper");    
+		var player1Scissors = document.querySelector(".scissors");  */  
+		var computerChoice = Math.floor(Math.random()*3);
+		
+		
+		var playerChoice =  document.querySelector(".rock, .paper, .scissors"); 
+		
+		if(computerChoice == 0){
+			computerChoice = "rock.";
+		}else if( computerChoice == 1){
+			computerChoice = "paper.";	
+		}else if(computerChoice == 2){
+			computerChoice = "scissors.";
+		}     
+		 console.log(computerChoice); 
+		
+		/*clickLink.onclick = function(){
+			document.querySelector(".answer").innerHTML = ' <h2>YOU WIN!!!!</h2> ';
+			
+			
+		}
+		
+		player1Rock.onclick = function(){
+			document.querySelector(".rock").innerHTML = '  <h2>Player 1 chose Rock</h2> ';
+			
+			
+		}
+		 
+		player1Paper.onclick = function(){
+			document.querySelector(".paper").innerHTML = '  <h2>Player 1 chose Paper</h2> ';
+			
+			
+		}
+		 
+		player1Scissors.onclick = function(){
+			document.querySelector(".scissors") + computerChoice;
+			console.log(player1Scissors + computerChoice)
+			
+			 
+		}*/
+		playerChoice.onclick = function(){
+			document.querySelector(".rock").innerHTML = '  <h2>Player 1 chose Rock</h2> ';
+			
+			
+		}
+		 
+		playerChoice.onclick = function(){
+			document.querySelector(".paper").innerHTML = '  <h2>Player 1 chose Paper</h2> ';
+			
+			
+		}
+		 
+		playerChoice.onclick = function(){
+			document.querySelector(".scissors");
+		}
+		
+		//test to see who wins
+		
+		if(playerChoice.onclick = function(){
+			document.querySelector(".scissors");
+		} && computerChoice == "paper." ){
+			//answer.innerHTML = " <h1> Player 1 Wins!!! </h1> ";
+			console.log(" Computer's Choice is " + computerChoice +  " Player 1's Choice is " + playerChoice + " player 1 Wins ");
+		 } 
+		else if( playerChoice.onclick = function(){
+			document.querySelector(".paper")} &&  computerChoice == "rock." ){
+			//answer.innerHTML = " <h1> Player 1 Wins!!! </h1> ";
+			console.log(" Computer's Choice is " + computerChoice +  " Player 1's Choice is " + player1Paper + " player 1 Wins ");
+		 } 
+		else if(player1Rock.onclick = function(){
+			document.querySelector(".rock")} && computerChoice == "scissors." ){
+			//answer.innerHTML = " <h1> Player 1 Wins!!! </h1> ";
+			console.log(" Computer's Choice is " + computerChoice +  " Player 1's Choice is " + player1Rock + " player 1 Wins ");
+		 } 
+		else if(player1Rock.onclick = function(){
+			document.querySelector(".rock")} && computerChoice == "paper." ){
+			//answer.innerHTML = " <h1> Player 2 Wins!!! </h1> ";
+			 console.log(" Computer's Choice is " + computerChoice +  " Player 1's Choice is " + player1Rock + " Computer Wins ");
+		 }
+		else if(player1Scissors.onclick = function(){
+			document.querySelector(".scissors")} && computerChoice == "rock." ){
+			//answer.innerHTML = " <h1> Player 2 Wins!!! </h1> ";
+			 console.log(" Computer's Choice is " + computerChoice +  " Player 1's Choice is " + player1Scissors + " Computer Wins " );
+		 } 
+		else if( player1Paper.onclick = function(){
+			document.querySelector(".paper")} && computerChoice == "scissors."  ){
+			//answer.innerHTML = " <h1> Player 2 Wins!!! </h1> ";       
+			 console.log(" Computer's Choice is " + computerChoice +  " Player 1's Choice is " + player1Paper + " Computer Wins ");
+		 } else{
+			 console.log(" Computer's Choice is " + computerChoice +  " Player 1's Choice is " + player1 + " It's a Draw ");     
+		 }
+		     
+		 
+		
+		
+		//click function
+	/*var clickLink = document.querySelector(".answer");
+		
+		clickLink.onclick = function(){
+			console.log(".answer")
+			return false;
+				
+		}*/
+		
+		
+	
+		
+		
+	</script>
+	
+	
+	
+	
+	
+</body>
+</html>
