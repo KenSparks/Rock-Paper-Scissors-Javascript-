@@ -85,11 +85,69 @@
 		var player1Paper = document.querySelector(".paper");    
 		var player1Scissors = document.querySelector(".scissors");  */  
 		var computerChoice = Math.floor(Math.random()*3);
-		var playerChoice = [document.querySelector(".rock"),  document.querySelector(".paper"), document.querySelector(".scissors")];
+		
+		if(computerChoice == 0){
+			computerChoice = "rock";
+		}else if( computerChoice == 1){
+			computerChoice = "paper";	 
+		}else if(computerChoice == 2){
+			computerChoice = "scissors"; 
+		}     
+		
+		
+		
+		
+		var playerChoice;
+		
+		var rock = document.querySelector(".rock");
+		var paper = document.querySelector(".paper");
+		var scissors = document.querySelector(".scissors");
+		
+		
+		rock.onclick = function(){
+			playerChoice = "rock";
+			afterPlayerChoice();
+		}	
+		
+		
+		paper.onclick = function(){
+			playerChoice = "paper";
+			afterPlayerChoice();
+		}	
+		
+		
+		scissors.onclick = function(){
+			playerChoice = "scissors";
+			afterPlayerChoice();
+		}	
+		
+		
+		function afterPlayerChoice (){
+			if(playerChoice == "rock" && computerChoice == "paper"){
+			   console.log("Computer Wins!!");
+			   } else if(playerChoice == "paper" && computerChoice == "scissors"){
+			   console.log("Computer Wins!!");
+			   }else if(playerChoice == "scissors" && computerChoice == "rock"){
+			   console.log("Computer Wins!!");
+			   }else if(playerChoice == "rock" && computerChoice == "scissors"){
+			   console.log("You Win!!");
+			   }else if(playerChoice == "paper" && computerChoice == "rock"){
+			   console.log("You Win!");
+			   }else if(playerChoice == "scissors" && computerChoice == "paper"){
+			   console.log("You Win!!");
+			   }else{
+			 	  console.log("draw");
+			   }
+			
+			   }
+		
+		
+		
+		//var playerChoice = [document.querySelector(".rock"),  document.querySelector(".paper"), document.querySelector(".scissors")];
 		/*var playerChoice = document.querySelector(".paper");
 		var playerChoice = document.querySelector(".scissors");*/
 		
-		if(computerChoice == 0){
+		/*if(computerChoice == 0){
 			computerChoice = "rock.";
 		}else if( computerChoice == 1){
 			computerChoice = "paper.";	 
@@ -98,7 +156,7 @@
 		}     
 		 console.log(computerChoice); 
 		
-		
+		*/
 		
 		/*clickLink.onclick = function(){
 			document.querySelector(".answer").innerHTML = ' <h2>YOU WIN!!!!</h2> ';
@@ -124,7 +182,7 @@
 			
 			 
 		}*/
-		playerChoice.click = function(){
+		/*playerChoice.click = function(){
 			document.querySelector(".rock").innerHTML = '  <h2>Player 1 chose Rock</h2> ';
 			
 			
@@ -174,7 +232,7 @@
 			 console.log(" Computer's Choice is " + computerChoice +  " Player 1's Choice is " + playerChoice + " Computer Wins ");
 		 } else{
 			 console.log(" Computer's Choice is " + computerChoice +  " Player 1's Choice is " + playerChoice + " It's a Draw ");     
-		 } 
+		 } */
 		        
 		 
 		
@@ -190,7 +248,7 @@
 		
 		
 		
-		
+		/*
 		
 		var kevsChoice = document.querySelector(".paper2") ;
 		
@@ -203,7 +261,7 @@
 			return false
 		}
 		
-		
+		*/
 	</script>
 	
 	
