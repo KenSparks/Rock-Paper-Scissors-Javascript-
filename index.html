@@ -73,14 +73,19 @@
 			
 		*/
 		
-		  
+		/*
+		When a picture of either rock, paper or scissors is clicked it will trigger the computer to make a random selection of either rock, paper or scissors. After the computer makes it selection both the user and computer selections the winner will be printed to the screen.
+		 
+		 */ 
+		
+		
 		/*var player1Rock = document.querySelector(".rock"); 
 		var player1Paper = document.querySelector(".paper");    
 		var player1Scissors = document.querySelector(".scissors");  */  
 		var computerChoice = Math.floor(Math.random()*3);
-		
-		
-		var playerChoice =  document.querySelector(".rock, .paper, .scissors"); 
+		var playerChoice = ".rock";
+		var playerChoice = ".paper";
+		var playerChoice = ".scissors";
 		
 		if(computerChoice == 0){
 			computerChoice = "rock.";
@@ -90,6 +95,8 @@
 			computerChoice = "scissors."; 
 		}     
 		 console.log(computerChoice); 
+		
+		
 		
 		/*clickLink.onclick = function(){
 			document.querySelector(".answer").innerHTML = ' <h2>YOU WIN!!!!</h2> ';
