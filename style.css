@@ -31,6 +31,8 @@ time, mark, audio, video {
 
 body {
     line-height:1;
+	font-family: 'Pacifico', cursive;
+
 }
 
 article,aside,details,figcaption,figure,
@@ -104,18 +106,36 @@ input, select {
 }
 
 
-.answer:hover{
-	transform: translate(658px,190px) rotate(360deg);
-	transition: transform 1.5s ease-in-out;
-}
-h1{
-	font-size: 200px;
-	color:#4FE0F2;
-	transform: translate(108px,0px) rotate(360deg);
-	transition: transform 1.5s ease-in-out;
+header{
+	
+	width:100%;
+	height:75px;
+	background-color:#5e75ad;
+	word-spacing:3em;
 }
 
+ h1{
+	text-align: center;
+	font-size:3em;
+	
+}
 
-a{
-	margin:25px;
+body{
+	background-color:#24345d;
+}
+.RPS{
+	margin-top:20%;
+	
+}
+.rock img,.paper img,.scissors img{
+	margin: 0 auto;;
+	border: 4px solid black;
+	border-radius:90px;
+	background-color:#5e75ad;
+}
+.rock  img:hover,.paper  img:hover,.scissors img:hover{
+	background-color:#2251c4;
+}
+.rock img{
+	padding-bottom:px;
 }
