@@ -2,9 +2,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Learning Javascript</title>
+<title>Rock. Paper. Scissors.</title>
 <link href="style.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico|Press+Start+2P" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
 
 </head>
 
@@ -18,7 +20,9 @@
 	</header>
 	
 	
-	 
+	 <div class="winner" align="center"> 
+		<h1> </h1>
+	 </div>
 	
 	<!--<div class="answer">
 	test
@@ -27,9 +31,14 @@
 	
 	<a href ="#" class="clickHandler"><img src="blade.gif" alt=""></a>	-->
 	<div class="RPS" align="center">
-	<a href="#" class="rock"><img src="rock.png" alt="rock"></a>
+	<a href="#" class="rock"><img src="rock.png" alt="rock"> </a>
 	<a href="#" class="paper"><img src="paper.png" alt="paper"></a>
 	<a href="#" class="scissors"><img src="scissors.png" alt="Scissors"></a>
+	</div>
+	
+	
+	<div class="reset" align="center">
+	
 	</div>
 	<script>
 	
@@ -93,10 +102,13 @@
 		
 		if(computerChoice == 0){
 			computerChoice = "rock";
+			
 		}else if( computerChoice == 1){
-			computerChoice = "paper";	 
+			computerChoice = "paper";
+			
 		}else if(computerChoice == 2){
 			computerChoice = "scissors"; 
+			
 		}     
 		
 		
@@ -112,12 +124,14 @@
 		rock.onclick = function(){
 			playerChoice = "rock";
 			afterPlayerChoice();
+			
 		}	
 		
 		
 		paper.onclick = function(){
 			playerChoice = "paper";
 			afterPlayerChoice();
+			
 		}	
 		
 		
@@ -129,20 +143,33 @@
 		
 		function afterPlayerChoice (){
 			if(playerChoice == "rock" && computerChoice == "paper"){
-			   console.log("Computer Wins!!");
+			   document.querySelector(".winner").innerHTML = ' <h1> Player 1: Rock </h1>  <h1> CPU: Paper</h1> <h1> You Lose...	 ';
+				document.querySelector(".reset").innerHTML = ' <a href="index.html"> Play Again? <a>';
 			   } else if(playerChoice == "paper" && computerChoice == "scissors"){
-			   console.log("Computer Wins!!");
+			   document.querySelector(".winner").innerHTML = ' <h1> Player 1: Paper </h1>  <h1> CPU: Scissors </h1> <h1> You Lose...	 ';
+				document.querySelector(".reset").innerHTML = ' <a href="index.html"> Play Again? <a>';
 			   }else if(playerChoice == "scissors" && computerChoice == "rock"){
-			   console.log("Computer Wins!!");
-			   }else if(playerChoice == "rock" && computerChoice == "scissors"){comm
-			   console.log("You Win!!");
+			  document.querySelector(".winner").innerHTML = ' <h1> Player 1: Scissors </h1>  <h1> CPU: Rock </h1> <h1> You Lose...	 ';
+		       document.querySelector(".reset").innerHTML = ' <a href="index.html"> Play Again? <a>';
+			   }else if(playerChoice == "rock" && computerChoice == "scissors")
+			   {document.querySelector(".winner").innerHTML = ' <h1> Player 1: Rock </h1>  <h1> CPU: Scissors </h1> <h1> You Win!!! </h1>';
+		      document.querySelector(".reset").innerHTML = ' <a href="index.html"> Play Again? <a>';
 			   }else if(playerChoice == "paper" && computerChoice == "rock"){
-			   console.log("You Win!");
+			   document.querySelector(".winner").innerHTML = ' <h1> Player 1: Paper </h1>  <h1> CPU: Rock </h1>  <h1> You Win!!! </h1>';
+			   document.querySelector(".reset").innerHTML = ' <a href="index.html"> Play Again? <a>';
 			   }else if(playerChoice == "scissors" && computerChoice == "paper"){
-			   console.log("You Win!!");
-			   }else{
-			 	  console.log("draw");
-			   }
+			    document.querySelector(".winner").innerHTML = ' <h1> Player 1: Scissors </h1>  <h1> CPU: paper</h1>  <h1> You Win!!! </h1>';
+				document.querySelector(".reset").innerHTML = ' <a href="index.html"> Play Again? <a>';
+			   }else if(playerChoice == "rock" && computerChoice == "rock"){
+			    document.querySelector(".winner").innerHTML = ' <h1> Player 1: Rock </h1>  <h1> CPU: Rock</h1>  <h1> Draw! </h1>';
+				document.querySelector(".reset").innerHTML = ' <a href="index.html"> Play Again? <a>';
+			   }else if(playerChoice == "paper" && computerChoice == "paper"){
+			    document.querySelector(".winner").innerHTML = ' <h1> Player 1: Paper </h1>  <h1> CPU: Paper</h1>  <h1> Draw! </h1>';
+				document.querySelector(".reset").innerHTML = ' <a href="index.html"> Play Again? <a>';
+			   }else if(playerChoice == "scissors" && computerChoice == "scissors"){
+			    document.querySelector(".winner").innerHTML = ' <h1> Player 1: Scissors </h1>  <h1> CPU: Scissors</h1>  <h1> Draw! </h1>';
+				document.querySelector(".reset").innerHTML = ' <a href="index.html"> Play Again? <a>';
+			   } 
 			
 			   }
 		

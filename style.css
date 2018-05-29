@@ -31,7 +31,8 @@ time, mark, audio, video {
 
 body {
     line-height:1;
-	font-family: 'Pacifico', cursive;
+	
+font-family: 'Press Start 2P', cursive;
 
 }
 
@@ -109,33 +110,122 @@ input, select {
 header{
 	
 	width:100%;
-	height:75px;
-	background-color:#5e75ad;
-	word-spacing:3em;
+	background-color:white;
+	word-spacing:.5em;
+	color:black;
+	padding-top:.5%;
 }
 
- h1{
+ header h1{
 	text-align: center;
-	font-size:3em;
+	font-size:1.2em;
+	 margin-left: 2%;
 	
 }
 
 body{
-	background-color:#24345d;
+	width:100%;
+	background-color:#000000;
+	color:white;
+}
+img{
+	width:100%;
 }
 .RPS{
-	margin-top:20%;
+	margin-top:1%;
+	margin-right:4%;
+}
+
+.RPS a{
+	margin-top:1%;
 	
 }
 .rock img,.paper img,.scissors img{
-	margin: 0 auto;;
+	margin: 20px;
 	border: 4px solid black;
 	border-radius:90px;
-	background-color:#5e75ad;
+	background-color:#ffffff;
+	
+}
+.rock, .paper , .scissors  {
+	display: inline-block;
+	width:20%;
+	
 }
 .rock  img:hover,.paper  img:hover,.scissors img:hover{
-	background-color:#2251c4;
+	background-color:#5e75ad;
 }
-.rock img{
-	padding-bottom:px;
+
+.Winner h1{
+	color:white;
+	font-size:1.5em;
+	
+	
+}
+.winner{
+	width:100%;
+	margin-top:1%;
+	line-height:1.5em;
+	
+}
+.rock a, .paper a, .scissors a{
+	font-size:1em;
+}
+
+.reset a{
+	color:white;
+	width:100%;
+	font-size: 1.5em;
+	margin-top: 1%;
+}
+.reset{
+	margin-top: 1%;
+}
+
+@media only screen and (max-width:375px){
+header{
+	word-spacing:.1em;
+	height:42px;
+}
+
+header h1{
+	padding-top:15px;
+	text-align: center;
+	font-size:.8em;
+	
+}	
+.RPS a{
+	width:28%;
+	display:block;
+	margin-right:12%;
+}	
+	
+
+.rock img:hover,.paper  img:hover,.scissors img:hover{
+	background-color:#ffffff;
+}
+.paper img,.scissors img{
+	margin-top:-11%;
+}
+.reset{
+	margin-top:.2%;
+	margin-bottom:1%;
+}
+.reset a{
+	color:#ffffff;
+	width:100%;
+	font-size: .9em;
+	
+}
+.Winner h1{
+	color:white;
+	font-size:.9em;
+	
+	
+}
+.winner{
+	width:100%;
+	margin-top:1%;
+	line-height: 1.5em;
+}
 }
